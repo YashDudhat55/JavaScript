@@ -1,0 +1,1079 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    background: #f5f7fb;
+
+    color: #1f2937;
+
+    display: flex;
+}
+
+
+/* =========================
+   LEFT SECTION
+========================= */
+
+.left-section {
+
+    width: 70%;
+
+    min-height: 100vh;
+
+    padding: 45px;
+
+    background: #eef2f7;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* =========================
+   EXAM CARD
+========================= */
+
+.exam-card {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 15px 40px rgba(15, 23, 42, 0.08);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.exam-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+.exam-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.exam-icon {
+
+    width: 46px;
+
+    height: 46px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #111827;
+
+    color: white;
+
+    border-radius: 10px;
+
+    font-size: 22px;
+}
+
+
+.exam-title h1 {
+
+    font-size: 24px;
+
+    color: #111827;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   QUESTION COUNT
+========================= */
+
+.question-count {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+.question-count strong {
+
+    color: #111827;
+}
+
+
+.question-mark {
+
+    width: 28px;
+
+    height: 28px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #f1f5f9;
+
+    color: #111827;
+
+    border-radius: 50%;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   QUESTION SECTION
+========================= */
+
+.question-section {
+
+    padding: 40px 0;
+}
+
+
+.question-heading {
+
+    margin-bottom: 30px;
+}
+
+
+.question-heading h2 {
+
+    font-size: 22px;
+
+    line-height: 1.6;
+
+    color: #111827;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   OPTIONS
+========================= */
+
+.options-container ul {
+
+    list-style: none;
+}
+
+
+.option {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 18px 20px;
+
+    margin-bottom: 14px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.option:hover {
+
+    background: #f1f5f9;
+
+    border-color: #94a3b8;
+
+    transform: translateX(3px);
+}
+
+
+.option input {
+
+    width: 18px;
+
+    height: 18px;
+
+    margin-right: 15px;
+
+    cursor: pointer;
+
+    accent-color: #111827;
+}
+
+
+.option span {
+
+    color: #334155;
+
+    font-size: 15px;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   SELECTED OPTION
+========================= */
+
+.option.selected {
+
+    background: #e5e7eb;
+
+    border-color: #111827;
+}
+
+
+.option.selected span {
+
+    color: #111827;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navigation {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+
+.navigation button {
+
+    min-width: 120px;
+
+    padding: 13px 22px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    border-radius: 8px;
+
+    transition: 0.2s ease;
+}
+
+
+/* =========================
+   PREVIOUS BUTTON
+========================= */
+
+.previous-btn {
+
+    background: #ffffff;
+
+    color: #475569;
+
+    border: 1px solid #cbd5e1;
+}
+
+
+.previous-btn:hover {
+
+    background: #f1f5f9;
+}
+
+
+.previous-btn:disabled {
+
+    opacity: 0.4;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   NEXT BUTTON
+========================= */
+
+.next-btn {
+
+    background: #111827;
+
+    color: white;
+
+    border: 1px solid #111827;
+}
+
+
+.next-btn:hover {
+
+    background: #000000;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   RIGHT SECTION
+========================= */
+
+.right-section {
+
+    width: 30%;
+
+    min-height: 100vh;
+
+    background: #111827;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px;
+}
+
+
+/* =========================
+   TIMER BOX
+========================= */
+
+.timer-box {
+
+    width: 280px;
+
+    padding: 35px 25px;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+
+.timer-icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #111827;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 27px;
+}
+
+
+.timer-box h2 {
+
+    font-size: 15px;
+
+    color: #64748b;
+
+    margin-bottom: 15px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+#timer {
+
+    font-size: 45px;
+
+    font-weight: 700;
+
+    color: #111827;
+
+    letter-spacing: 3px;
+}
+
+
+.timer-box p {
+
+    margin-top: 12px;
+
+    font-size: 12px;
+
+    color: #94a3b8;
+}
+
+
+/* =========================
+   SUBMIT MODAL
+========================= */
+
+.submit-modal {
+
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(15, 23, 42, 0.75);
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+}
+
+
+/* =========================
+   SUBMIT MODAL BOX
+========================= */
+
+.modal-box {
+
+    width: 450px;
+
+    background: white;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   MODAL ICON
+========================= */
+
+.modal-icon {
+
+    width: 100%;
+
+    height: 110px;
+
+    background: #111827;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 38px;
+}
+
+
+/* =========================
+   MODAL CONTENT
+========================= */
+
+.modal-box h2 {
+
+    font-size: 23px;
+
+    color: #111827;
+
+    margin-top: 28px;
+}
+
+
+.modal-box p {
+
+    color: #64748b;
+
+    line-height: 1.7;
+
+    padding: 0 40px;
+
+    margin-top: 12px;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   MODAL BUTTONS
+========================= */
+
+.modal-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 30px;
+}
+
+
+.no-btn,
+.yes-btn {
+
+    padding: 12px 25px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    border-radius: 8px;
+
+    transition: 0.2s ease;
+}
+
+
+/* =========================
+   NO BUTTON
+========================= */
+
+.no-btn {
+
+    background: white;
+
+    color: #475569;
+
+    border: 1px solid #cbd5e1;
+}
+
+
+.no-btn:hover {
+
+    background: #f1f5f9;
+}
+
+
+/* =========================
+   YES BUTTON
+========================= */
+
+.yes-btn {
+
+    background: #111827;
+
+    color: white;
+
+    border: 1px solid #111827;
+}
+
+
+.yes-btn:hover {
+
+    background: #000000;
+}
+
+
+/* =========================
+   SUCCESS MODAL
+========================= */
+
+.success-modal {
+
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(15, 23, 42, 0.75);
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 1001;
+}
+
+
+/* =========================
+   SUCCESS BOX
+========================= */
+
+.success-box {
+
+    width: 430px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   SUCCESS ICON
+========================= */
+
+.success-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    background: #111827;
+
+    margin: 0 auto 22px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.check-mark {
+
+    color: white;
+
+    font-size: 36px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   SUCCESS TEXT
+========================= */
+
+.success-box h2 {
+
+    color: #111827;
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+}
+
+
+.success-box>p {
+
+    color: #64748b;
+
+    margin-bottom: 20px;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESULT SCORE
+========================= */
+
+.result-score {
+
+    margin: 20px 0;
+
+    padding: 20px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+}
+
+
+.result-score h3 {
+
+    font-size: 38px;
+
+    color: #111827;
+
+    margin-bottom: 5px;
+}
+
+
+.result-score span {
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   RESULT DETAILS
+========================= */
+
+.result-details {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+
+.result-item {
+
+    padding: 15px 10px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+.result-label {
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+
+.result-item strong {
+
+    font-size: 22px;
+
+    color: #111827;
+}
+
+
+/* =========================
+   DONE BUTTON
+========================= */
+
+.done-btn {
+
+    width: 100%;
+
+    padding: 13px;
+
+    background: #111827;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.done-btn:hover {
+
+    background: #000000;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    body {
+
+        display: block;
+    }
+
+
+    .left-section {
+
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 25px 15px;
+    }
+
+
+    .exam-card {
+
+        padding: 25px;
+
+        border-radius: 12px;
+    }
+
+
+    .right-section {
+
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 35px 15px;
+    }
+
+
+    .timer-box {
+
+        width: 100%;
+
+        max-width: 320px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .left-section {
+
+        padding: 10px;
+    }
+
+
+    .exam-card {
+
+        padding: 20px;
+    }
+
+
+    .exam-header {
+
+        display: block;
+    }
+
+
+    .exam-title h1 {
+
+        font-size: 20px;
+    }
+
+
+    .question-count {
+
+        margin-top: 18px;
+    }
+
+
+    .question-section {
+
+        padding: 30px 0;
+    }
+
+
+    .question-heading h2 {
+
+        font-size: 18px;
+    }
+
+
+    .option {
+
+        padding: 15px;
+    }
+
+
+    .option span {
+
+        font-size: 14px;
+    }
+
+
+    .navigation {
+
+        gap: 10px;
+    }
+
+
+    .navigation button {
+
+        min-width: auto;
+
+        flex: 1;
+    }
+
+
+    .modal-box {
+
+        width: 100%;
+    }
+
+
+    .success-box {
+
+        width: 100%;
+
+        padding: 30px 20px;
+    }
+
+
+    .modal-buttons {
+
+        padding: 25px 20px;
+    }
+
+
+    .result-score {
+
+        margin: 18px 0;
+
+        padding: 18px;
+    }
+
+
+    .result-score h3 {
+
+        font-size: 32px;
+    }
+
+
+    .result-details {
+
+        gap: 8px;
+    }
+
+
+    .result-item {
+
+        padding: 12px 5px;
+    }
+
+
+    .result-item strong {
+
+        font-size: 20px;
+    }
+
+
+    .result-label {
+
+        font-size: 10px;
+    }
+
+}

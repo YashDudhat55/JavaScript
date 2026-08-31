@@ -1,0 +1,108 @@
+/* Body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Top Buttons */
+body > button {
+    padding: 12px 25px;
+    margin: 8px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #5a4fcf;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+body > button:hover {
+    background-color: #5a4fcf;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Main Parent */
+.parent {
+    margin-top: 30px;
+}
+
+/* Counter Box */
+.counter {
+    width: 350px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Heading */
+.counter h2 {
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 28px;
+}
+
+/* Counter Main */
+.counter-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Plus and Minus Buttons */
+.counter-main button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #667eea;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button Hover */
+.counter-main button:hover {
+    background-color: #764ba2;
+    transform: scale(1.1);
+}
+
+/* Counter Number */
+#count {
+    min-width: 60px;
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+    color: #5a4fcf;
+}
+
+/* Mobile Responsive */
+@media (max-width: 500px) {
+
+    .counter {
+        width: 280px;
+        padding: 25px;
+    }
+
+    .counter h2 {
+        font-size: 24px;
+    }
+
+    .counter-main {
+        gap: 15px;
+    }
+}

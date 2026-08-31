@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Examination</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         LEFT SECTION
+    ========================== -->
+
+    <div class="left-section">
+
+        <div class="exam-card">
+
+            <!-- Exam Header -->
+
+            <div class="exam-header">
+
+                <div class="exam-title">
+
+                    <div class="exam-icon">
+                        ▤
+                    </div>
+
+                    <h1>Online Examination</h1>
+
+                </div>
+
+
+                <div class="question-count">
+
+                    <div class="question-mark">
+                        ?
+                    </div>
+
+                    Question
+
+                    <strong id="questionNumber">1</strong>
+
+                    of
+
+                    <strong>30</strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- Question Section -->
+
+            <div class="question-section">
+
+                <div class="question-heading">
+
+                    <h2 id="question">
+                        Question
+                    </h2>
+
+                </div>
+
+
+                <!-- Options -->
+
+                <div class="options-container">
+
+                    <ul>
+
+                        <li class="option">
+
+                            <input type="radio" name="answer">
+
+                            <span>Option 1</span>
+
+                        </li>
+
+
+                        <li class="option">
+
+                            <input type="radio" name="answer">
+
+                            <span>Option 2</span>
+
+                        </li>
+
+
+                        <li class="option">
+
+                            <input type="radio" name="answer">
+
+                            <span>Option 3</span>
+
+                        </li>
+
+
+                        <li class="option">
+
+                            <input type="radio" name="answer">
+
+                            <span>Option 4</span>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+
+            <div class="navigation">
+
+                <button type="button" id="preBtn" class="previous-btn">
+
+                    ← Previous
+
+                </button>
+
+
+                <button type="button" id="nextBtn" class="next-btn">
+
+                    Next →
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         RIGHT TIMER SECTION
+    ========================== -->
+
+    <div class="right-section">
+
+        <div class="timer-box">
+
+            <div class="timer-icon">
+                ⏱
+            </div>
+
+            <h2>Time Remaining</h2>
+
+            <div id="timer">
+                30:00
+            </div>
+
+            <p>Minutes : Seconds</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         SUBMIT CONFIRMATION MODAL
+    ========================== -->
+
+    <div class="submit-modal" id="submitModal">
+
+        <div class="modal-box">
+
+            <div class="modal-icon">
+                ?
+            </div>
+
+
+            <h2>Submit Examination?</h2>
+
+
+            <p>
+                Are you sure you want to submit your examination?
+                You won't be able to change your answers after submission.
+            </p>
+
+
+            <div class="modal-buttons">
+
+                <button type="button" id="noBtn" class="no-btn">
+
+                    No
+
+                </button>
+
+
+                <button type="button" id="yesBtn" class="yes-btn">
+
+                    Yes, Submit
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         SUCCESS / RESULT MODAL
+    ========================== -->
+
+    <div class="success-modal" id="successModal">
+
+        <div class="success-box">
+
+            <!-- Success Icon -->
+
+            <div class="success-icon">
+
+                <div class="check-mark">
+                    ✓
+                </div>
+
+            </div>
+
+
+            <h2>
+                Examination Submitted!
+            </h2>
+
+
+            <p>
+                Your examination has been submitted successfully.
+            </p>
+
+
+            <!-- =========================
+                 FINAL SCORE
+            ========================== -->
+
+            <div class="result-score">
+
+                <h3 id="finalScore">
+                    0/30
+                </h3>
+
+                <span id="finalPercent">
+                    0% Score
+                </span>
+
+            </div>
+
+
+            <!-- =========================
+                 RESULT DETAILS
+            ========================== -->
+
+            <div class="result-details">
+
+                <div class="result-item">
+
+                    <span class="result-label">
+                        Correct
+                    </span>
+
+                    <strong id="correctResult">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="result-item">
+
+                    <span class="result-label">
+                        Wrong
+                    </span>
+
+                    <strong id="wrongResult">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="result-item">
+
+                    <span class="result-label">
+                        Skipped
+                    </span>
+
+                    <strong id="skippedResult">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- Done Button -->
+
+            <button type="button" id="doneBtn" class="done-btn">
+
+                Done
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
