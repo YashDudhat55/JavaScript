@@ -1,7 +1,3 @@
-// ===============================
-// QUESTIONS
-// ===============================
-
 const allQuestion = [
 
     {
@@ -297,10 +293,6 @@ const allQuestion = [
 ];
 
 
-// ===============================
-// GET HTML ELEMENTS
-// ===============================
-
 const question =
     document.getElementById("question");
 
@@ -338,49 +330,25 @@ const timer =
     document.getElementById("timer");
 
 
-// ===============================
-// VARIABLES
-// ===============================
-
 let currentIndex = 0;
-
-
-// Store selected answer
-// for every question
 
 let selectedAnswers =
     new Array(allQuestion.length).fill(null);
 
-
-// Score
-
 let score = 0;
-
-
-// Timer
 
 let totalSeconds = 30 * 60;
 
 let timerInterval;
 
 
-// ===============================
-// LOAD QUESTION
-// ===============================
-
 function loadTheQuestion() {
 
     const currentQuestion =
         allQuestion[currentIndex];
 
-
-    // Question
-
     question.textContent =
         currentQuestion.question;
-
-
-    // Options
 
     option.forEach((item, index) => {
 
@@ -389,14 +357,8 @@ function loadTheQuestion() {
 
     });
 
-
-    // Question number
-
     questionNumber.textContent =
         currentIndex + 1;
-
-
-    // Previous button
 
     if (currentIndex === 0) {
 
@@ -407,9 +369,6 @@ function loadTheQuestion() {
         preBtn.disabled = false;
 
     }
-
-
-    // Next / Submit button
 
     if (
         currentIndex ===
@@ -426,9 +385,6 @@ function loadTheQuestion() {
 
     }
 
-
-    // Remove selected class
-
     option.forEach((item) => {
 
         item.parentElement.classList.remove(
@@ -437,17 +393,11 @@ function loadTheQuestion() {
 
     });
 
-
-    // Remove radio selection
-
     optionInputs.forEach((input) => {
 
         input.checked = false;
 
     });
-
-
-    // Show previously selected answer
 
     if (
         selectedAnswers[currentIndex] !== null
@@ -456,11 +406,9 @@ function loadTheQuestion() {
         const selectedIndex =
             selectedAnswers[currentIndex];
 
-
         option[selectedIndex]
             .parentElement
             .classList.add("selected");
-
 
         optionInputs[selectedIndex]
             .checked = true;
@@ -470,21 +418,12 @@ function loadTheQuestion() {
 }
 
 
-// ===============================
-// SELECT ANSWER
-// ===============================
-
 option.forEach((item, index) => {
 
     item.addEventListener("click", function () {
 
-        // Save selected answer
-
         selectedAnswers[currentIndex] =
             index;
-
-
-        // Remove selected class
 
         option.forEach((optionItem) => {
 
@@ -493,14 +432,8 @@ option.forEach((item, index) => {
 
         });
 
-
-        // Add selected class
-
         item.parentElement
             .classList.add("selected");
-
-
-        // Check radio
 
         optionInputs[index].checked = true;
 
@@ -509,8 +442,6 @@ option.forEach((item, index) => {
 });
 
 
-// Also allow clicking radio button
-
 optionInputs.forEach((input, index) => {
 
     input.addEventListener("change", function () {
@@ -518,14 +449,12 @@ optionInputs.forEach((input, index) => {
         selectedAnswers[currentIndex] =
             index;
 
-
         option.forEach((optionItem) => {
 
             optionItem.parentElement
                 .classList.remove("selected");
 
         });
-
 
         option[index]
             .parentElement
@@ -535,10 +464,6 @@ optionInputs.forEach((input, index) => {
 
 });
 
-
-// ===============================
-// NEXT BUTTON
-// ===============================
 
 nextBtn.addEventListener("click", () => {
 
@@ -553,17 +478,9 @@ nextBtn.addEventListener("click", () => {
 
     } else {
 
-        // Calculate score
-
         calculateScore();
 
-
-        // Stop timer
-
         clearInterval(timerInterval);
-
-
-        // Open confirmation modal
 
         submitModal.style.display =
             "flex";
@@ -572,10 +489,6 @@ nextBtn.addEventListener("click", () => {
 
 });
 
-
-// ===============================
-// PREVIOUS BUTTON
-// ===============================
 
 preBtn.addEventListener("click", () => {
 
@@ -590,19 +503,10 @@ preBtn.addEventListener("click", () => {
 });
 
 
-// ===============================
-// NO BUTTON
-// ===============================
-
 noBtn.addEventListener("click", () => {
-
-    // Close submit modal
 
     submitModal.style.display =
         "none";
-
-
-    // Continue timer
 
     clearInterval(timerInterval);
 
@@ -612,39 +516,20 @@ noBtn.addEventListener("click", () => {
 });
 
 
-// ===============================
-// YES BUTTON
-// ===============================
-
 yesBtn.addEventListener("click", () => {
 
-    // Calculate final score
-
     calculateScore();
-
-
-    // Close submit modal
 
     submitModal.style.display =
         "none";
 
-
-    // Stop timer
-
     clearInterval(timerInterval);
-
-
-    // Open result modal
 
     successModal.style.display =
         "flex";
 
 });
 
-
-// ===============================
-// DONE BUTTON
-// ===============================
 
 doneBtn.addEventListener("click", () => {
 
@@ -653,10 +538,6 @@ doneBtn.addEventListener("click", () => {
 
 });
 
-
-// ===============================
-// SCORE LOGIC
-// ===============================
 
 function calculateScore() {
 
@@ -668,16 +549,11 @@ function calculateScore() {
 
     let skipped = 0;
 
-
-    // Check every question
-
     for (
         let i = 0;
         i < allQuestion.length;
         i++
     ) {
-
-        // Skipped
 
         if (
             selectedAnswers[i] === null
@@ -686,9 +562,6 @@ function calculateScore() {
             skipped++;
 
         }
-
-
-        // Correct
 
         else if (
             selectedAnswers[i] ===
@@ -699,9 +572,6 @@ function calculateScore() {
 
         }
 
-
-        // Wrong
-
         else {
 
             wrong++;
@@ -710,19 +580,10 @@ function calculateScore() {
 
     }
 
-
-    // Final score
-
     score = correct;
-
-
-    // Percentage
 
     const percentage =
         (score / allQuestion.length) * 100;
-
-
-    // Console result
 
     console.log(
         "========== EXAM RESULT =========="
@@ -762,76 +623,48 @@ function calculateScore() {
         "================================="
     );
 
-
-    // ===============================
-    // SHOW RESULT IN HTML
-    // ===============================
-
     const finalScore =
         document.getElementById(
             "finalScore"
         );
-
 
     const finalPercent =
         document.getElementById(
             "finalPercent"
         );
 
-
     const correctResult =
         document.getElementById(
             "correctResult"
         );
-
 
     const wrongResult =
         document.getElementById(
             "wrongResult"
         );
 
-
     const skippedResult =
         document.getElementById(
             "skippedResult"
         );
 
-
-    // Final score
-
     finalScore.textContent =
         score + "/" + allQuestion.length;
-
-
-    // Percentage
 
     finalPercent.textContent =
         Math.round(percentage) + "% Score";
 
-
-    // Correct
-
     correctResult.textContent =
         correct;
 
-
-    // Wrong
-
     wrongResult.textContent =
         wrong;
-
-
-    // Skipped
 
     skippedResult.textContent =
         skipped;
 
 }
 
-
-// ===============================
-// TIMER
-// ===============================
 
 function updateTimer() {
 
@@ -840,68 +673,42 @@ function updateTimer() {
             totalSeconds / 60
         );
 
-
     let seconds =
         totalSeconds % 60;
-
-
-    // Add zero
 
     minutes =
         minutes < 10
             ? "0" + minutes
             : minutes;
 
-
     seconds =
         seconds < 10
             ? "0" + seconds
             : seconds;
 
-
-    // Display timer
-
     timer.textContent =
         minutes + ":" + seconds;
-
-
-    // Time finished
 
     if (totalSeconds <= 0) {
 
         clearInterval(timerInterval);
 
-
         timer.textContent =
             "00:00";
 
-
-        // Calculate result
-
         calculateScore();
-
-
-        // Automatically show result
 
         successModal.style.display =
             "flex";
-
 
         return;
 
     }
 
-
-    // Decrease time
-
     totalSeconds--;
 
 }
 
-
-// ===============================
-// START TIMER
-// ===============================
 
 updateTimer();
 
@@ -911,9 +718,5 @@ timerInterval =
         1000
     );
 
-
-// ===============================
-// FIRST QUESTION
-// ===============================
 
 loadTheQuestion();
