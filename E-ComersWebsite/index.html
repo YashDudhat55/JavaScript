@@ -2,47 +2,398 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>E-ComerceWebsite</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body style="background-color: #002a54;">
-    
+
     <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">E-Comerce</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+
+            <a class="navbar-brand" href="index.html">
+                E-Comerce
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
                 <span class="navbar-toggler-icon"></span>
+
             </button>
+
             <div class="collapse navbar-collapse" id="navbarScroll">
-                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+                    style="--bs-scroll-height: 100px;">
+
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+
+                        <a class="nav-link active"
+                            aria-current="page"
+                            href="index.html">
+
+                            Home
+
+                        </a>
+
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="View-Products.html">View Products</a>
+
+                        <a class="nav-link"
+                            aria-current="page"
+                            href="View-Products.html">
+
+                            View Products
+
+                        </a>
+
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="Add-Product.html">Add Product</a>
+
+                        <a class="nav-link"
+                            aria-current="page"
+                            href="Add-Product.html">
+
+                            Add Product
+
+                        </a>
+
                     </li>
+
                 </ul>
+
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+
+                    <input class="form-control me-2"
+                        type="search"
+                        id="navbarSearch"
+                        placeholder="Search"
+                        aria-label="Search">
+
+                    <button class="btn btn-outline-success"
+                        type="submit">
+
+                        Search
+
+                    </button>
+
                 </form>
+
             </div>
+
         </div>
+
     </nav>
+
+
+    <!-- HERO SECTION -->
+
+    <div class="container mt-5">
+
+        <div class="row">
+
+            <div class="col-md-6 text-white">
+
+                <h1>
+
+                    Shop Smarter.<br>
+
+                    <span>
+                        Live Better.
+                    </span>
+
+                </h1>
+
+                <p>
+
+                    Discover amazing products carefully selected
+                    to make your everyday life better.
+
+                </p>
+
+                <a href="#productsSection"
+                    class="btn btn-light">
+
+                    Shop Now
+
+                </a>
+
+                <a href="Add-Product.html"
+                    class="btn btn-outline-light">
+
+                    Add Product
+
+                </a>
+
+
+                <div class="row mt-4">
+
+                    <div class="col-4">
+
+                        <h4 id="heroProductCount">
+                            0+
+                        </h4>
+
+                        <span>
+                            Products
+                        </span>
+
+                    </div>
+
+
+                    <div class="col-4">
+
+                        <h4 id="heroCategoryCount">
+                            0+
+                        </h4>
+
+                        <span>
+                            Categories
+                        </span>
+
+                    </div>
+
+
+                    <div class="col-4">
+
+                        <h4>
+                            24/7
+                        </h4>
+
+                        <span>
+                            Support
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6">
+
+                <div class="card p-4">
+
+                    <h5>
+                        FEATURED PRODUCT
+                    </h5>
+
+                    <div id="heroProductImage"
+                        class="text-center">
+
+                        <p>
+                            No Product
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Trending Now
+                        </span>
+
+                        <h3 id="heroProductName">
+
+                            Explore Our Products
+
+                        </h3>
+
+                        <strong id="heroProductPrice">
+
+                            ₹0
+
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUICK STATS -->
+
+    <div class="container mt-5">
+
+        <div class="row g-3">
+
+            <div class="col-md-3">
+
+                <div class="card p-3">
+
+                    <span>
+                        Total Products
+                    </span>
+
+                    <h3 id="totalHomeProducts">
+                        0
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-3">
+
+                <div class="card p-3">
+
+                    <span>
+                        Available Now
+                    </span>
+
+                    <h3 id="availableHomeProducts">
+                        0
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-3">
+
+                <div class="card p-3">
+
+                    <span>
+                        Categories
+                    </span>
+
+                    <h3 id="homeCategories">
+                        0
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-3">
+
+                <div class="card p-3">
+
+                    <span>
+                        Out of Stock
+                    </span>
+
+                    <h3 id="outStockHomeProducts">
+                        0
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PRODUCTS -->
+
+    <section id="productsSection">
+
+        <div class="container mt-5">
+
+            <h2 class="text-white">
+
+                Discover Our Collection
+
+            </h2>
+
+            <p class="text-white">
+
+                Browse all products available in our store.
+
+            </p>
+
+
+            <!-- PRODUCT SEARCH -->
+
+            <div class="mb-3">
+
+                <input type="text"
+                    id="homeProductSearch"
+                    class="form-control"
+                    placeholder="Search products...">
+
+            </div>
+
+
+            <!-- CATEGORY FILTER -->
+
+            <div id="categoryFilters"
+                class="mb-4">
+
+            </div>
+
+
+            <!-- PRODUCTS -->
+
+            <div class="row g-4"
+                id="displayProducts">
+
+            </div>
+
+
+            <!-- NO PRODUCTS -->
+
+            <div id="homeEmptyProducts"
+                class="text-center text-white py-5"
+                style="display: none;">
+
+                <h3>
+                    No Products Found
+                </h3>
+
+                <p>
+                    Add your first product and start building your store.
+                </p>
+
+                <a href="Add-Product.html"
+                    class="btn btn-light">
+
+                    Add Product
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+    </script>
+
+    <script src="js/script.js"></script>
 
 </body>
 
