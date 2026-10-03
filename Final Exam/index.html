@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">Task Manager</div>
+    <nav class="menu">
+        <a href="index.html" class="active">Home</a>
+        <a href="Add-task.html">Add Task</a>
+    </nav>
+</header>
+
+<main class="main">
+    <section class="task-box">
+        <div class="task-top">
+            <div>
+                <h2>Task List</h2>
+                <p>Manage your tasks efficiently</p>
+            </div>
+            <a href="Add-task.html" class="add-button">Add New Task</a>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="search-task" placeholder="Search tasks...">
+            <select id="priority-filter">
+                <option value="">All Priorities</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <select id="status-filter">
+                <option value="">All Tasks</option>
+                <option value="Active">Active</option>
+                <option value="Completed">Completed</option>
+            </select>
+            <button class="search-button" onclick="searchTasks()">Search</button>
+        </div>
+
+        <table class="task-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Due Date</th>
+                    <th>Priority</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="task-table"></tbody>
+        </table>
+    </section>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>

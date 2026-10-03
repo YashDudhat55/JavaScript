@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Task</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Edit-task.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">Task Manager</div>
+    <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="Add-task.html">Add Task</a>
+    </nav>
+</header>
+
+<main class="form-main">
+    <div class="form-box">
+        <div class="form-title">Edit Task</div>
+
+        <div class="form-content">
+            <label>Title </label>
+            <input type="text" id="edit-title" placeholder="Enter task title">
+
+            <label>Description</label>
+            <textarea id="edit-description" placeholder="Enter task description"></textarea>
+
+            <label>Due Date </label>
+            <input type="date" id="edit-date">
+
+            <label>Priority </label>
+            <select id="edit-priority">
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+                <option value="Low">Low</option>
+            </select>
+
+            <div class="form-buttons">
+                <button class="update-task" onclick="updateTask()">Update Task</button>
+                <button class="cancel-task" onclick="cancelEdit()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="js/Edit-task.js"></script>
+</body>
+</html>

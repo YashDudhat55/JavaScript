@@ -1,0 +1,13 @@
+/* Edit Task Page */
+
+.form-main {
+    margin-top: 35px;
+}
+
+.update-task {
+    background: #0878ed;
+}
+
+.cancel-task {
+    background: #68727c;
+}

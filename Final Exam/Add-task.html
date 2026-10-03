@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Add-task.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">Task Manager</div>
+    <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="Add-task.html" class="active">Add Task</a>
+    </nav>
+</header>
+
+<main class="form-main">
+    <div class="form-box">
+        <div class="form-title">Add New Task</div>
+
+        <div class="form-content">
+            <label>Title </label>
+            <input type="text" id="task-title" placeholder="Enter task title">
+
+            <label>Description</label>
+            <textarea id="task-description" placeholder="Enter task description"></textarea>
+
+            <label>Due Date</label>
+            <input type="date" id="task-date">
+
+            <label>Priority</label>
+            <select id="task-priority">
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+                <option value="Low">Low</option>
+            </select>
+
+            <div class="form-buttons">
+                <button class="add-task" onclick="addTask()">Add Task</button>
+                <button class="clear-task" onclick="clearForm()">Clear</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="js/Add-task.js"></script>
+</body>
+</html>
